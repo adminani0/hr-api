@@ -5,18 +5,17 @@ pipeline {
         stage('git checkout') {
              when {
                expression {
-               params.branchname == "develop"
+                   params.branchname == "develop"
               }
            }
             steps {
-                echo "${params.branchname}"
                 git branch: "${params.branchname}", credentialsId: 'github tokens', url: 'https://github.com/adminani0/hr-api'
             }
         }    
         stage('maven build') {
              when {
                expression {
-               params.branchname == "develop"
+                   params.branchname == "develop"
               }
            }
             steps {
