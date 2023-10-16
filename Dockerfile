@@ -6,3 +6,4 @@ RUN tar xf apache-tomcat-9.0.82.tar.gz && rm apache-tomcat-9.0.82.tar.gz
 EXPOSE 8080
 CMD ["/tomcat/apache-tomcat-9.0.82/bin/catalina.sh", "run"]
 
+
